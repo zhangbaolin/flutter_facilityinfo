@@ -15,10 +15,12 @@
   }else if([@"getMac" isEqualToString:call.method]){
 
 
-     result(@"");
+    result([YKeyChain identifierForVendor]);
   } else if([@"getUUID" isEqualToString:call.method]){
-      result(@"");
+      result([YKeyChain identifierForVendor]);
    
+  }else if([@"getIMEI" isEqualToString:call.method]){
+    result([YKeyChain identifierForVendor]);
   }else if([@"getIdentifier" isEqualToString:call.method]){
     result([YKeyChain identifierForVendor]);
   }

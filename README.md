@@ -20,6 +20,51 @@ Import package:flutter_facilityinfo/flutter_facilityinfo.dart, instantiate Phone
 ### Example:
 
 ```dart
+说明：
+使用此插件可获取安卓手机的  IMEI  MAC  UUID  
+
+getIdentifier（）
+此方法具有获取信息的优先级  也可自行获取并设置
+首先获取 IMEI  如为空 则获取 MAC  如为空 则获取UUID
+
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+在使用插件方法获取信息之前需要先动态申请权限：
+引入 permission_handler: ^3.2.2
+
+
+ Future<Null> _prepare() async {
+    isAlow = await _checkPermission();
+    if (isAlow) {
+      //允许执行下一步
+    } else {
+      print("获取权限失败");
+    }
+  }
+// 检查权限
+  Future<bool> _checkPermission() async {
+    if (Platform.isAndroid) {
+      PermissionStatus permission = await PermissionHandler()
+          .checkPermissionStatus(PermissionGroup.phone);
+      if (permission != PermissionStatus.granted) {
+        Map<PermissionGroup, PermissionStatus> permissions =
+            await PermissionHandler()
+                .requestPermissions([PermissionGroup.phone]);
+        if (permissions[PermissionGroup.phone] == PermissionStatus.granted) {
+          return true;
+        }
+      } else {
+        return true;
+      }
+    } else {
+      return true;
+    }
+    return false;
+  }
+
+
+
+```
+```dart
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:flutter_facilityinfo/flutter_facilityinfo.dart';

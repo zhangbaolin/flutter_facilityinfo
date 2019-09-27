@@ -12,6 +12,11 @@ class FlutterPhoneinfo {
   }
 
   //获取mac
+  static Future<String> get getIMEI async {
+    final String imei = await _channel.invokeMethod('getIMEI');
+    return imei;
+  }
+  //获取mac
   static Future<String> get getMac async {
     final String mac = await _channel.invokeMethod('getMac');
     return mac;

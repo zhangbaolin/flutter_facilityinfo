@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/flutter_facilityinfo.iml" filepath="$PROJECT_DIR$/flutter_facilityinfo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/flutter_phoneinfo_android.iml" filepath="$PROJECT_DIR$/android/flutter_phoneinfo_android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/example/android/flutter_phoneinfo_example_android.iml" filepath="$PROJECT_DIR$/example/android/flutter_phoneinfo_example_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/flutter_facilityinfo.iml" filepath="$PROJECT_DIR$/.idea/flutter_facilityinfo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android/flutter_facilityinfo_android.iml" filepath="$PROJECT_DIR$/android/flutter_facilityinfo_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/example/android/flutter_facilityinfo_example_android.iml" filepath="$PROJECT_DIR$/example/android/flutter_facilityinfo_example_android.iml" />
     </modules>
   </component>
 </project>

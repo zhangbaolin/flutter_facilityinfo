@@ -1,4 +1,4 @@
-package com.pluging.flutter_phoneinfo_example;
+package com.pluging.flutter_facilityinfo_example;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

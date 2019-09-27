@@ -1,4 +1,4 @@
-# flutter_phoneinfo_example
+# flutter_facilityinfo_example
 
 Demonstrates how to use the flutter_facilityinfo plugin.
 
